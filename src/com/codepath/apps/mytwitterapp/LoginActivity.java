@@ -1,8 +1,10 @@
 package com.codepath.apps.mytwitterapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Toast;
 
 import com.codepath.oauth.OAuthLoginActivity;
 
@@ -12,6 +14,7 @@ public class LoginActivity extends OAuthLoginActivity<TwitterClient> {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+		
 	}
 
 	// Inflate the menu; this adds items to the action bar if it is present.
@@ -25,8 +28,8 @@ public class LoginActivity extends OAuthLoginActivity<TwitterClient> {
 	// i.e Display application "homepage"
     @Override
     public void onLoginSuccess() {
-    	// Intent i = new Intent(this, PhotosActivity.class);
-    	// startActivity(i);
+    	Intent i = new Intent(getApplicationContext(),TimelineActivity.class);
+		startActivity(i);
     }
     
     // OAuth authentication flow failed, handle the error
@@ -34,6 +37,7 @@ public class LoginActivity extends OAuthLoginActivity<TwitterClient> {
     @Override
     public void onLoginFailure(Exception e) {
         e.printStackTrace();
+        Toast.makeText(getApplicationContext(), "User Authentication Failed", Toast.LENGTH_SHORT);
     }
     
     // Click handler method for the button used to start OAuth flow
