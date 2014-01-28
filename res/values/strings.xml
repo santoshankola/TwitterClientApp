@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Rest Client Template</string>
+    <string name="app_name">Twitter timeline app</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_photos">Flickr Photos</string>
     <string name="login_label">Log in</string>
-    <string name="title_activity_timeline">TimelineActivity</string>
+    <string name="title_activity_timeline">Tweets Timeline</string>
+    <string name="action_compose">Compose Tweet</string>
+    <string name="title_activity_compose_tweet">ComposeTweetActivity</string>
+    <string name="complose_label">Tweet</string>
+    <string name="cancel_label">Cancel</string>
+    <string name="compose_hint">Compose new Tweet</string>
+    <string name="action_refresh_timeline">Refresh timeline</string>
 
 </resources>
